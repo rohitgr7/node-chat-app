@@ -20,19 +20,20 @@ describe('generateMessage', () => {
 
 });
 
-describe('generateLocationMessage' , () => {
-	
-	it('should generate correct location object' , () => {
+describe('generateLocationMessage', () => {
+
+	it('should generate correct location object', () => {
 		var from = 'Mark';
 		var latitude = 15;
 		var longitude = 19;
 		var url = 'https://www.google.com/maps?q=15,19';
-		var message = generateLocationMessage(from , latitude , longitude);
-		
+		var message = generateLocationMessage(from, latitude, longitude);
+
 		expect(message.createdAt).to.be.a('number');
 		expect(message).to.include({
-			from, url
+			from,
+			url
 		});
 	});
-	
+
 });
